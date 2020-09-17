@@ -49,9 +49,7 @@ function App() {
   return (
     <div className="app">
       {token ? (
-        <Route exact path="/">
-          <Player spotify={spotify} />
-        </Route>
+        <Player spotify={spotify} />
       ) : (
         <>
           <Login />
