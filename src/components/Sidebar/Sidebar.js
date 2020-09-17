@@ -6,7 +6,7 @@ import LibraryMusicIcon from "@material-ui/icons/LibraryMusic";
 import { useStateProviderValue } from "../utils/StateProvider";
 import SidebarOption from "../SidebarOption/SidebarOption";
 function Sidebar({ spotify }) {
-  const [{ playlists }] = useStateProviderValue();
+  const [{ playlists }, dispatch] = useStateProviderValue();
   console.log(playlists);
   return (
     <div className="sidebar">

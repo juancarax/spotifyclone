@@ -3,7 +3,7 @@ import "./SongRow.scss";
 import { useStateProviderValue } from "../utils/StateProvider";
 
 function SongRow({ track }) {
-  const [dispatch] = useStateProviderValue();
+  const [{}, dispatch] = useStateProviderValue();
 
   function setCurrentSong() {
     dispatch({

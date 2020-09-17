@@ -10,7 +10,7 @@ import {
 import SongRow from "../SongRow/SongRow";
 
 function Body({ spotify }) {
-  const [{ current_playlist }] = useStateProviderValue();
+  const [{ current_playlist }, dispatch] = useStateProviderValue();
   return (
     <div className="body">
       <Header spotify={spotify} />

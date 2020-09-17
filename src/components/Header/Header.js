@@ -4,7 +4,7 @@ import { useStateProviderValue } from "../utils/StateProvider";
 import SearchIcon from "@material-ui/icons/Search";
 import { Avatar } from "@material-ui/core";
 function Header() {
-  const [{ user }] = useStateProviderValue();
+  const [{ user }, dispatch] = useStateProviderValue();
   return (
     <div className="header">
       <div className="header__left">

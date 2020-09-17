@@ -2,7 +2,7 @@ import React from "react";
 import "./SidebarOption.scss";
 import { useStateProviderValue } from "../utils/StateProvider";
 function SidebarOption({ title, Icon, id, spotify }) {
-  const [dispatch] = useStateProviderValue();
+  const [{}, dispatch] = useStateProviderValue();
   async function goToPlayList() {
     const playlist = await spotify.getPlaylist(id);
     await dispatch({
