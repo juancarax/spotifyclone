@@ -5,7 +5,6 @@ import { getTokenFromUrl } from "./components/utils/spotify";
 import SpotifyWebApi from "spotify-web-api-js";
 import Player from "./components/Player/Player";
 import { useStateProviderValue } from "./components/utils/StateProvider";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
   const spotify = new SpotifyWebApi();
@@ -49,19 +48,15 @@ function App() {
   console.log(token);
   return (
     <div className="app">
-      <Router>
-        <Switch>
-          {token ? (
-            <Route exact path="/">
-              <Player spotify={spotify} />
-            </Route>
-          ) : (
-            <>
-              <Login />
-            </>
-          )}
-        </Switch>
-      </Router>
+      {token ? (
+        <Route exact path="/">
+          <Player spotify={spotify} />
+        </Route>
+      ) : (
+        <>
+          <Login />
+        </>
+      )}
     </div>
   );
 }
